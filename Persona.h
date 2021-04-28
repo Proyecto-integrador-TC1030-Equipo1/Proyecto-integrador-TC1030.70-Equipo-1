@@ -1,26 +1,28 @@
 #ifndef Persona_H
 #define Persona_H
 #include <iostream>
+#include "Direccion.h"
 
 using namespace std;
 
 class Persona{
     private:
-        string nombre, direccion, fecha, sexo;
-        int numero;
+        string nombre, fecha, sexo;
+        Direccion direccion;
+        int id;
     public:
         Persona();
         Persona(string, string, string, string, int);
         string getNombre();
         void setNombre(string);
-        string getDireccion();
-        void setDireccion(string);
+        Direccion getDireccion();
+        void setDireccion(Direccion);
         string getFecha();
         void setFecha(string);
         string getSexo();
         void setSexo(string);
-        int getNumero();
-        void setNumero(int);
+        int getId();
+        void setId(int);
         void imprimir();
 };
 #endif
