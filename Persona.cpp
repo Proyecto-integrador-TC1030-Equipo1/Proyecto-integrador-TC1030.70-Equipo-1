@@ -1,16 +1,17 @@
 #include "Persona.h"
+#include "Direccion.h"
 #include <iostream>
 using namespace std;
 
 Persona::Persona(){
     nombre = "-";
-    direccion = "-";
+    direccion = Direccion();
     fecha = "-";
     sexo = "-";
     numero = 0;
 }
 
-Persona::Persona(string _nombre, string _direccion, string _fecha, string _sexo, int _numero){
+Persona::Persona(string _nombre, Direccion _direccion, string _fecha, string _sexo, int _numero){
     nombre = _nombre;
     direccion = _direccion;
     fecha = _fecha;
@@ -26,11 +27,11 @@ void Persona::setNombre(string _nombre){
     nombre = _nombre;
 }
 
-string Persona::getDireccion(){
+Direccion Persona::getDireccion(){
     return direccion;
 }
 
-void Persona::setDireccion(string _direccion){
+void Persona::setDireccion(Direccion _direccion){
     direccion = _direccion;
 }
 
@@ -50,17 +51,17 @@ void Persona::setSexo(string _sexo){
     sexo = _sexo;
 }
 
-int Persona::getNumero(){
+int Persona::getId(){
     return numero;
 }
 
-void Persona::setNumero(int _numero){
+void Persona::setId(int _numero){
     numero = _numero;
 }
 
 void Persona::imprimir(){
     cout << "Nombre: " << nombre << endl;
-    cout << "Direccion: " << direccion << endl;
+    cout << "Direccion: " << direccion.getPais() << ", " << direccion.getEstado() << ", " << direccion.getCiudad() << ", " << direccion.getCodigoPostal() << ", " << direccion.getCalleNum() << endl;
     cout << "Fecha Nacimiento: " << fecha << endl;
     cout << "Sexo: " << sexo << endl;
     cout << "Numero Telefonico: " << numero << endl;
