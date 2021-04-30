@@ -7,9 +7,10 @@
 class Cliente : public Persona{
   public:
     Cliente();
-    Cliente(string, Direccion, string, string, string, int, string);
+    Cliente(string, Direccion, string, string, int, string);
     string getRfc();
     void setRfc(string);
+    void imprimir();
   private:
     string rfc;
     //Producto compras, carrito;

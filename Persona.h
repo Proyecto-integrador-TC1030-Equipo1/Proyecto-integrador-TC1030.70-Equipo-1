@@ -21,8 +21,8 @@ class Persona{
         void setFecha(string);
         string getSexo();
         void setSexo(string);
-        int getId();
-        void setId(int);
-        void imprimir();
+        int getNumero();
+        void setNumero(int);
+        virtual void imprimir();
 };
 #endif

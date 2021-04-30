@@ -7,6 +7,10 @@
 class Empleado : public Persona{
   public:
     Empleado();
+    Empleado(string, Direccion, string, string, int, string);
+    string getCargo();
+    void setCargo(string);
+    void imprimir();
   private:
     string cargo;
 };

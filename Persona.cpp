@@ -51,11 +51,11 @@ void Persona::setSexo(string _sexo){
     sexo = _sexo;
 }
 
-int Persona::getId(){
+int Persona::getNumero(){
     return numero;
 }
 
-void Persona::setId(int _numero){
+void Persona::setNumero(int _numero){
     numero = _numero;
 }
 
