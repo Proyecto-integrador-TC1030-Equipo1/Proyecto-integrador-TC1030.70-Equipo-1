@@ -1,4 +1,5 @@
 #include "Direccion.h"
+#include <iostream>
 
 //constructor por defecto sin argumentos que inicializa todos los atributos a strings vacíos
 Direccion::Direccion()
