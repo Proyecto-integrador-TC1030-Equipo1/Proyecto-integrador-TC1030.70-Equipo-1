@@ -9,10 +9,10 @@ class Persona{
     private:
         string nombre, fecha, sexo;
         Direccion direccion;
-        int id;
+        int numero;
     public:
         Persona();
-        Persona(string, string, string, string, int);
+        Persona(string, Direccion, string, string, int);
         string getNombre();
         void setNombre(string);
         Direccion getDireccion();
