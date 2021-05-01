@@ -8,33 +8,29 @@ class Producto
 {
 private:
     string nombre;
-    int cantidad, id, precioCompra, precioVenta;
-    float peso, tamano;
-    bool existencia;
+    int id;
+    float peso, tamano, precioCompra, precioVenta;
 
 public:
     Producto();
-    Producto();
+    ~Producto();
+    Producto(string, int, float, float, float, float);
 
     //getters
     string getNombre();
-    int getCantidad();
     int getId();
     int getPrecioCompra();
     int getPrecioVenta();
     float getPeso();
     float getTamano();
-    bool getExistencia();
 
     //setters
     void setNombre(string);
-    void setCantidad(int);
     void setId(int);
-    void setPrecioCompra(int);
-    void setPrecioVenta(int);
+    void setPrecioCompra(float);
+    void setPrecioVenta(float);
     void setPeso(float);
     void setTamano(float);
-    void setExistencia(bool);
 };
 
 #endif
