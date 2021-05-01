@@ -11,7 +11,10 @@ class Cliente : public Persona{
     string getRfc();
     void setRfc(string);
     void imprimir();
+    void agregarProducto(int,int);
+    void eliminarProducto(int);
   private:
     string rfc;
-    //Producto compras, carrito;
+    int *inv, sizeMem;
+
 };
