@@ -19,8 +19,8 @@ public:
     //getters
     string getNombre();
     int getId();
-    int getPrecioCompra();
-    int getPrecioVenta();
+    float getPrecioCompra();
+    float getPrecioVenta();
     float getPeso();
     float getTamano();
 

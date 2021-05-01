@@ -74,3 +74,7 @@ void Sucursal::eliminarEmpleado(int indice){
     empleados[sizeof(empleados)-1]=Empleado();
   }
 }
+
+Empleado Sucursal::getEmpleado(int indice){
+  return empleados[indice];
+}

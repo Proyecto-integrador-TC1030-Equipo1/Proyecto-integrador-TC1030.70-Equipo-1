@@ -8,10 +8,12 @@ using namespace std;
 
 Empleado::Empleado():Persona(){
   cargo="NA";
+  sucursalId=0;
 }
 
-Empleado::Empleado(string _nombre, Direccion _direccion, string _fecha, string _sexo, int _numero, string _cargo) : Persona(_nombre, _direccion, _fecha, _sexo, _numero){
+Empleado::Empleado(string _nombre, Direccion _direccion, string _fecha, string _sexo, int _numero, string _cargo, int sId) : Persona(_nombre, _direccion, _fecha, _sexo, _numero){
   cargo = _cargo;
+  sucursalId = sId;
 }
 
 string Empleado::getCargo(){
@@ -20,6 +22,14 @@ string Empleado::getCargo(){
 
 void Empleado::setCargo(string _cargo){
   cargo = _cargo;
+}
+
+string Empleado::getSucursalId(){
+  return sucursalId;
+}
+
+void Empleado::setSucursalId(int sId){
+  sucursalId = sId;
 }
 
 void Empleado::imprimir(){

@@ -1,5 +1,5 @@
-#ifndef Inventario_h
-#define Inventario_h
+#ifndef Sucursal_h
+#define Sucursal_h
 #include <iostream>
 #include "Cliente.h"
 #include "Empleado.h"
@@ -14,6 +14,7 @@ class Sucursal{
   public:
     Sucursal();
     Sucursal(string, int);
+    Empleado getEmpleado(int);
     string getNombreSucursal();
     void agregarProducto(int,int);
     void eliminarProducto(int);

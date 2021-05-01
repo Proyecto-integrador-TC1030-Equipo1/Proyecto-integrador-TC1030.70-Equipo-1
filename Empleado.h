@@ -11,6 +11,9 @@ class Empleado : public Persona{
     string getCargo();
     void setCargo(string);
     void imprimir();
+    void setSucursalId(int);
+    int getSucursalId();
   private:
     string cargo;
+    int sucursalId;
 };
