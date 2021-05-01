@@ -1,76 +1,86 @@
 #include "Producto.h"
 
 //Constructores
-Producto::Producto(/* args */)
-{
-}
-
 Producto::Producto()
 {
+    nombre = "-";
+    id = 0;
+    peso = 1;
+    tamano = 1;
+    precioCompra = 1;
+    precioVenta = 1;
 }
+
+Producto::Producto(string _nombre, int _id, float _peso, float _tamano, float _compra, float _venta)
+{
+    nombre = _nombre;
+    id = _id;
+    peso = _peso;
+    tamano = _tamano;
+    precioCompra = _compra;
+    precioVenta = _venta;
+}
+
+Producto::~Producto() {}
 
 //Getters
-string getNombre()
+string Producto::getNombre()
 {
-}
-
-int Producto::getCantidad()
-{
+    return nombre;
 }
 
 int Producto::getId()
 {
+    return id;
 }
 
-int Producto::getPrecioCompra()
+float Producto::getPrecioCompra()
 {
+    return precioCompra;
 }
 
-int Producto::getPrecioVenta()
+float Producto::getPrecioVenta()
 {
+    return precioVenta;
 }
 
 float Producto::getPeso()
 {
+    return peso;
 }
 
 float Producto::getTamano()
 {
-}
-
-bool Producto::getExistencia()
-{
+    return tamano;
 }
 
 //Setters
-void Producto::setNombre(string)
+void Producto::setNombre(string _nombre)
 {
+    nombre = _nombre;
 }
 
-void Producto::setCantidad(int)
+void Producto::setId(int _id)
 {
+    id = _id;
 }
 
-void Producto::setId(int)
+void Producto::setPrecioCompra(float _compra)
 {
+    precioCompra = _compra;
 }
 
-void Producto::setPrecioCompra(int)
+void Producto::setPrecioVenta(float _venta)
 {
+    precioVenta = _venta;
 }
 
-void Producto::setPrecioVenta(int)
+void Producto::setPeso(float _peso)
 {
+    peso = _peso;
 }
 
-void Producto::setPeso(float)
+void Producto::setTamano(float _tamano)
 {
-}
-
-void Producto::setTamano(float)
-{
-}
-
-void Producto::setExistencia(bool)
-{
+    tamano = _tamano;
 }
