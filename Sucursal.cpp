@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Sucursales.h"
+#include "Sucursal.h"
 #include<bits/stdc++.h>
 using namespace std;
 
