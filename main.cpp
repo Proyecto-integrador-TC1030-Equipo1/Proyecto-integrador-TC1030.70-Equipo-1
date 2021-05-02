@@ -16,46 +16,43 @@
 using namespace std;
 
 int main(){
-    int x = 0;
-    while (x = 0;)
-    {
+// Valor = 0 --- Crea 2 Sucursales
+// Valor = 1 --- Agrega 1 de: Gerente, Administrador, Vendedor por sucursal
+// Valor = 2 --- Agrega 4 productos, modifica 1 producto y quita 1 producto
+// Valor = 3 --- Agrega el numero de piezas de cada producto a las sucursales
+// Valor = 4 --- Agrega 3 clientes, modifica 1 cliente, quita 1 cliente
+// Valor = 5 --- Generar una orden y asignarla a un administrador , generar datos de orden y del cliente
+// Valor = 6 --- Generar una orden y asignarla a un vendedor , generar datos de orden y del cliente
+    string sucursal1 = "plaza";
+    string sucursal2 = "mercado";
+    int mem1 = 3;
+    int mem2 = 5;
+    Sucursal s1 = Sucursal(sucursal1, mem1);
+    Sucursal s2 = Sucursal(sucursal2, mem2);
+    Inventario inv;
+    inv.agregarSucursal(s1);
+    inv.agregarSucursal(s2);
+    Empleado g1,g2,v1,v2,a1,a2;
+    g1.setNombre("Arnoldo");
+    g1.setCargo("Gerente");
+    g2.setNombre("Gonzalo");
+    g2.setCargo("Gerente");
+    v1.setNombre("Pizarro");
+    v1.setCargo("Vendedor");
+    v2.setNombre("Juan");
+    v2.setCargo("Vendedor");
+    a1.setNombre("Rodolfo");
+    a1.setCargo("Administrador");
+    a2.setNombre("Lazaro");
+    a2.setCargo("Administrador");
+    s1.aniadirEmpleado(g1);
+    s1.aniadirEmpleado(v1);
+    s1.aniadirEmpleado(a1);
+    s2.aniadirEmpleado(g2);
+    s2.aniadirEmpleado(v2);
+    s2.aniadirEmpleado(a2);
     
-        int valor = 0;
-        cout << "Valor = 0 --- Crea 2 Sucursales" << endl;
-        cout << "Valor = 1 --- Agrega 1 de: Gerente, Administrador, Vendedor por sucursal" <<endl;
-        cout << "Valor = 2 --- Agrega 4 productos, modifica 1 producto y quita 1 producto" << endl;
-        cout << "Valor = 3 --- Agrega el numero de piezas de cada producto a las sucursales" << endl;
-        cout << "Valor = 4 --- Agrega 3 clientes, modifica 1 cliente, quita 1 cliente" << endl;
-        cout << "Valor = 5 --- Generar una orden y asignarla a un vendedor , generar datos de orden y del cliente" << endl;
-        cout << "Valor = 6 --- Generar una orden y asignarla a un vendedor , generar datos de orden y del cliente" << endl;
-        cin >> valor;
-        switch (valor)
-        {
-        case 0:
-            /* code */
-            break;
-        case 1:
-            /* code */
-            break;
-        case 2:
-            /* code */
-            break;
-        case 3:
-            /* code */
-            break;
-        case 4:
-            /* code */
-            break;
-        case 5:
-            /* code */
-            break;
-        case 6:
-            /* code */
-            break;
-        default:
-            break;
-        }
-    }
+
 
     return 0;
 }
