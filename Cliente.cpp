@@ -14,6 +14,9 @@ Cliente::Cliente():Persona(){
   formaPago="Efectivo";
 }
 
+Cliente::~Cliente(){
+}
+
 Cliente::Cliente(string _nombre, Direccion _direccion, string _fecha, string _sexo, int _numero, string _rfc):Persona(_nombre, _direccion, _fecha, _sexo, _numero){
   rfc = _rfc;
   inv = new int [1];

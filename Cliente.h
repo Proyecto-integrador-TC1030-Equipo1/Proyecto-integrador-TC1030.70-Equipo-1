@@ -7,6 +7,7 @@
 class Cliente : public Persona{
   public:
     Cliente();
+    ~Cliente();
     Cliente(string, Direccion, string, string, int, string);
     string getFormaPago();
     int getInv(int);
