@@ -17,13 +17,11 @@ using namespace std;/**/
 
 int main(){
 // Valor = 0 --- Crea 2 Sucursales
-cout << "Hola\n";
     Sucursal s1 = Sucursal("Plaza", 3);
     Sucursal s2 = Sucursal("Mercadp", 5);
     Inventario inv;
     inv.agregarSucursal(s1);
     inv.agregarSucursal(s2);
-    ///*
 // Valor = 1 --- Agrega 1 de: Gerente, Administrador, Vendedor por sucursal
     Empleado g1,g2,v1,v2,a1,a2;
     g1.setNombre("Arnoldo");
@@ -70,13 +68,15 @@ cout << "Hola\n";
     c2.setNombre("Checo");
     c3.setNombre("Pablo");
     c3.~Cliente();
-    c1.agregarProducto(1,3);
-    c1.agregarProducto(0,4);
+    c1.agregarProducto(3,1);
+    c1.agregarProducto(4,0);
 // Valor = 5 --- Generar una orden y asignarla a un administrador , generar datos de orden y del cliente
     inv.agregarCliente(c1);
     inv.atiende(a1);
+    inv+1;
 // Valor = 6 --- Generar una orden y asignarla a un vendedor , generar datos de orden y del cliente
     inv.agregarCliente(c1);
     inv.atiende(v1);//*/
+    inv+1;
     return 0;
 }

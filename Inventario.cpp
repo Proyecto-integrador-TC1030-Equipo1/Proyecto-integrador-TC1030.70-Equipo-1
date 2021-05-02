@@ -3,45 +3,44 @@
 using namespace std;
 
 Inventario::Inventario(){
-    sucursales = new Sucursal[1];
-    productos = new Producto[1];
     memSucursal=1;
     sizeSucursal=0;
     memProducto=1;
     sizeProducto=0;
+    sucursales = new Sucursal[memSucursal];
+    productos = new Producto[memProducto];
 }
 
 void Inventario::agregarSucursal(Sucursal nueva){
-  if (sizeSucursal+1 > memSucursal){
+  if (sizeSucursal+1 >= memSucursal){
     memSucursal= sizeSucursal+2;
     Sucursal *temp = new Sucursal[memSucursal];
     for (int i = 0; i <= sizeSucursal; i++) {
       temp[i]=sucursales[i];
     }
-    sizeSucursal++;
     temp[sizeSucursal]=nueva;
+    sizeSucursal++;
     sucursales = temp;
   }else{
-    sizeSucursal++;
     sucursales[sizeSucursal]=nueva;
+    sizeSucursal++;
   }
 }
 
 void Inventario::agregarProducto(Producto nuevo){
-    if (sizeProducto+1 > memProducto){
+    if (sizeProducto+1 >= memProducto){
         memProducto+=2;
-        sizeProducto++;
         Producto *temp = new Producto[memProducto];
-        for (int i = 0; i < sizeProducto; i++)
+        for (int i = 0; i <= sizeProducto; i++)
         {
            temp[i] = productos[i];
         }
-        sizeProducto++;
         temp[sizeProducto] = nuevo;
+        sizeProducto++;
         productos = temp;
     }else{
-        sizeProducto++;
         productos[sizeProducto] = nuevo;
+        sizeProducto++;
     }
     for (int i = 0; i <= sizeSucursal; i++) {
       sucursales[i].agregarProducto(0,sizeProducto);
@@ -51,15 +50,15 @@ void Inventario::agregarProducto(Producto nuevo){
 
 void Inventario::eliminarProducto(int indice){
   if (indice<memProducto){
-    for (int j=indice; j<memProducto; j++){
+    for (int j=indice; j<memProducto-1; j++){
       productos[j]=productos[j+1];
     }
-    productos[sizeof(productos)-1]=Producto();
+    productos[memProducto]=Producto();
     for (int i = 0; i < sizeSucursal; i++) {
       sucursales[i].eliminarProducto(indice);
     }
-    cliente.eliminarProducto(indice);
-}}
+    cliente.eliminarProducto(indice);}
+  }
 
 void Inventario::atiende(Empleado at){
   atendio = at;
@@ -74,12 +73,13 @@ void Inventario::transferirEmpleado(int sOrigen, int sDestino, int indiceEmplead
 }
 
 void Inventario::generarOrden(int sucuId){
-  if (atendio.getCargo() == "gerente" || atendio.getCargo() == "vendedor") {
+  cout << atendio.getCargo() << endl;
+  if (atendio.getCargo() == "Gerente" || atendio.getCargo() == "Vendedor") {
     int cesta[memProducto], cont=0;
     double total=0;
     string cestaN[memProducto];
     for (int i = 0; i < sizeProducto; i++) {
-      if (cliente.getInv(i) > 0 || sucursales[sucuId].getInv(i) >0) {
+      if (cliente.getInv(i) > 0 && sucursales[sucuId].getInv(i) >0) {
         cesta[cont]= cliente.getInv(i);
         cestaN[cont]= productos[i].getNombre();
         cont++;
@@ -91,10 +91,10 @@ void Inventario::generarOrden(int sucuId){
       cout << "Se necesita adquirir uno o mas prodcutos\n";
     }else{
       cout << "Cliente: " << cliente.getNombre() <<"| Atendio: "<<atendio.getNombre()<< "| Total: " << total<<endl;
-      for (int i = 0; i <= cont; i++) {
+      for (int i = 0; i < cont; i++) {
         cout << cestaN[i] <<": $"<< cesta[i] << endl;
-        cout << "Gracias por su preferencia" << endl;
       }
+      cout << "Gracias por su preferencia" << endl;
     }
   }else{
     cout << "Este empleado no puede generar ordenes\n";
@@ -122,7 +122,7 @@ void Inventario::eliminarSucursal(int indice){
 //. . .Al mover de espacio (ejemplo con "2"), el espacio vacio se pondrá un cero como valor establecido.
 
 void Inventario::agregarAinvSucursal(int iSuc,int indice, int cantidad){
-  sucursales[iSuc].agregarProducto(indice, cantidad);
+  sucursales[iSuc].agregarProducto(cantidad, indice);
 }
 
 void Inventario::agregarCliente(Cliente c1){

@@ -24,11 +24,11 @@ Sucursal::Sucursal(string nombre, int mem){ //mem = numero de productos en el in
 }
 
 void Sucursal::agregarProducto(int cantidad, int indice){ //indice =mem
-  if (indice+1 > sizeMem){
+  if (indice+1 >= sizeMem){
     sizeMem= indice;
     int *temp = new int[sizeMem];
     for (int i = 0; i < sizeMem-2; i++) {
-      if (sizeof(inv) <= i){
+      if (sizeMem <= i){
         temp[i]= inv[i];
       }else{
         temp[i]=0;
