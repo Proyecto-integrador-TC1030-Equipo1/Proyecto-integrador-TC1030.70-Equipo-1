@@ -63,6 +63,14 @@ void Cliente::agregarProducto(int cantidad, int indice){ //indice =mem
   }
 }
 
+int Cliente::getInv(int indice){
+  return inv[indice];
+}
+
+void Cliente::setInv(int indice, int cantidad){
+  inv[indice]=cantidad;
+}
+
 void Cliente::eliminarProducto(int indice){
   if (indice<sizeMem){
     for (int j=indice; j<sizeMem; j++){

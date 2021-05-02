@@ -73,9 +73,31 @@ void Inventario::transferirEmpleado(int sOrigen, int sDestino, int indiceEmplead
   sucursales[sDestino].aniadirEmpleado(transfiriendo);
 }
 
-void Inventario::generarOrden(){
+void Inventario::generarOrden(int sucuId){
   if (atendio.getCargo() == "gerente" || atendio.getCargo() == "vendedor") {
-    /* code */
+    int cesta[memProducto], cont=0;
+    double total=0;
+    string cestaN[memProducto];
+    for (int i = 0; i < sizeProducto; i++) {
+      if (cliente.getInv(i) > 0 || sucursales[sucuId].getInv(i) >0) {
+        cesta[cont]= cliente.getInv(i);
+        cestaN[cont]= productos[i].getNombre();
+        cont++;
+        total= total + (productos[i].getPrecioVenta()*cliente.getInv(i));
+        sucursales[sucuId].setInv(i, sucursales[sucuId].getInv(i)-cliente.getInv(i));
+      }
+    }
+    if (cont == 0){
+      cout << "Se necesita adquirir uno o mas prodcutos\n";
+    }else{
+      cout << "Cliente: " << cliente.getNombre() <<"| Atendio: "<<atendio.getNombre()<< "| Total: " << total<<endl;
+      for (int i = 0; i <= cont; i++) {
+        cout << cestaN[i] <<": $"<< cesta[i] << endl;
+        cout << "Gracias por su preferencia" << endl;
+      }
+    }
+  }else{
+    cout << "Este empleado no puede generar ordenes\n";
   }
 }
 

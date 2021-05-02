@@ -9,6 +9,8 @@ class Cliente : public Persona{
     Cliente();
     Cliente(string, Direccion, string, string, int, string);
     string getFormaPago();
+    int getInv(int);
+    void setInv(int, int);
     void setFormaPago(string);
     string getRfc();
     void setRfc(string);

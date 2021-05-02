@@ -89,3 +89,11 @@ void Sucursal::actualizarSucursalId(int n){
       }
 
 }
+
+int Sucursal::getInv(int n){
+  return inv[n];
+}
+
+void Sucursal::setInv(int indice, int cantidad){
+  inv[indice]=cantidad;
+}

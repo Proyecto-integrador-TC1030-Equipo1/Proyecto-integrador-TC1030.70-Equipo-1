@@ -36,3 +36,7 @@ void Empleado::imprimir(){
   Persona::imprimir();
   cout << "Cargo: " << cargo << endl;
 }
+
+string Empleado::getNombre(){
+  return nombre;
+}

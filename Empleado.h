@@ -13,6 +13,7 @@ class Empleado : public Persona{
     void imprimir();
     void setSucursalId(int);
     int getSucursalId();
+    string getNombre();
   private:
     string cargo;
     int sucursalId;
