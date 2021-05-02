@@ -5,7 +5,7 @@
 #define Cliente_h
 #include "Cliente.h"
 #endif
-#ifndef Empleado_h 
+#ifndef Empleado_h
 #define Empleado_h
 #include "Empleado.h"
 #endif
@@ -26,7 +26,7 @@ class Sucursal{
     void eliminarProducto(int);
     void aniadirEmpleado(Empleado);
     void eliminarEmpleado(int);
-    int getSize(); 
+    int getSize();
     void actualizarSucursalId(int);
 };
 #endif

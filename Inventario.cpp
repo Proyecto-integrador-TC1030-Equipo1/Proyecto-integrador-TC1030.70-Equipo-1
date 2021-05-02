@@ -83,7 +83,7 @@ void Inventario::eliminarSucursal(int indice){
   if (indice<memSucursal){
     for (int j=indice; j<memSucursal; j++){
       sucursales[j]=sucursales[j+1];
-      sucursales[j].actualizarId(j+1);
+      sucursales[j].actualizarSucursalId(j+1);
       //for (int k=0;k<sucursales[j].getSize();k++){
         //sucursales[j]=
 

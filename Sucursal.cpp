@@ -83,8 +83,9 @@ int Sucursal::getSize(){
     return size;
 }
 
-int Sucursal::actualizarSucursalId(int n){
+void Sucursal::actualizarSucursalId(int n){
     for (int i=0;i<size;i++){
-        empleados[i].setSucursalId(n)}
+        empleados[i].setSucursalId(n);
+      }
 
 }
