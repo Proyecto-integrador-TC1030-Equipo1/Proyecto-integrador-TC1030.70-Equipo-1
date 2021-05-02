@@ -16,10 +16,46 @@
 using namespace std;
 
 int main(){
-  Cliente c1 = Cliente();
-  c1.imprimir();
-  Empleado e1 = Empleado();
-  e1.setSucursalId(3);
-  e1.imprimir();
-  return 0;
+    int x = 0;
+    while (x = 0;)
+    {
+    
+        int valor = 0;
+        cout << "Valor = 0 --- Crea 2 Sucursales" << endl;
+        cout << "Valor = 1 --- Agrega 1 de: Gerente, Administrador, Vendedor por sucursal" <<endl;
+        cout << "Valor = 2 --- Agrega 4 productos, modifica 1 producto y quita 1 producto" << endl;
+        cout << "Valor = 3 --- Agrega el numero de piezas de cada producto a las sucursales" << endl;
+        cout << "Valor = 4 --- Agrega 3 clientes, modifica 1 cliente, quita 1 cliente" << endl;
+        cout << "Valor = 5 --- Generar una orden y asignarla a un vendedor , generar datos de orden y del cliente" << endl;
+        cout << "Valor = 6 --- Generar una orden y asignarla a un vendedor , generar datos de orden y del cliente" << endl;
+        cin >> valor;
+        switch (valor)
+        {
+        case 0:
+            /* code */
+            break;
+        case 1:
+            /* code */
+            break;
+        case 2:
+            /* code */
+            break;
+        case 3:
+            /* code */
+            break;
+        case 4:
+            /* code */
+            break;
+        case 5:
+            /* code */
+            break;
+        case 6:
+            /* code */
+            break;
+        default:
+            break;
+        }
+    }
+
+    return 0;
 }
