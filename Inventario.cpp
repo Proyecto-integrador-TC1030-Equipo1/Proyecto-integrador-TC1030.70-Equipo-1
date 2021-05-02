@@ -101,6 +101,10 @@ void Inventario::generarOrden(int sucuId){
   }
 }
 
+void Inventario::operator + (int sucuId){
+  generarOrden(sucuId);
+}
+
 void Inventario::eliminarSucursal(int indice){
   if (indice<memSucursal){
     for (int j=indice; j<memSucursal; j++){
