@@ -13,19 +13,17 @@
 #endif
 #include "inventario.h"
 #include "Sucursal.h"
-using namespace std;
+using namespace std;/**/
 
 int main(){
 // Valor = 0 --- Crea 2 Sucursales
-    string sucursal1 = "plaza";
-    string sucursal2 = "mercado";
-    int mem1 = 3;
-    int mem2 = 5;
-    Sucursal s1 = Sucursal(sucursal1, mem1);
-    Sucursal s2 = Sucursal(sucursal2, mem2);
+cout << "Hola\n";
+    Sucursal s1 = Sucursal("Plaza", 3);
+    Sucursal s2 = Sucursal("Mercadp", 5);
     Inventario inv;
     inv.agregarSucursal(s1);
     inv.agregarSucursal(s2);
+    ///*
 // Valor = 1 --- Agrega 1 de: Gerente, Administrador, Vendedor por sucursal
     Empleado g1,g2,v1,v2,a1,a2;
     g1.setNombre("Arnoldo");
@@ -79,6 +77,6 @@ int main(){
     inv.atiende(a1);
 // Valor = 6 --- Generar una orden y asignarla a un vendedor , generar datos de orden y del cliente
     inv.agregarCliente(c1);
-    inv.atiende(v1);
+    inv.atiende(v1);//*/
     return 0;
 }
