@@ -26,5 +26,7 @@ class Sucursal{
     void eliminarProducto(int);
     void aniadirEmpleado(Empleado);
     void eliminarEmpleado(int);
+    int getSize(); 
+    void actualizarSucursalId(int);
 };
 #endif

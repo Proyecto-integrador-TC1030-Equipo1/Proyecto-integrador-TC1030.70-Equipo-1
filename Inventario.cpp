@@ -78,3 +78,19 @@ void Inventario::generarOrden(){
     /* code */
   }
 }
+
+void Inventario::eliminarSucursal(int indice){
+  if (indice<memSucursal){
+    for (int j=indice; j<memSucursal; j++){
+      sucursales[j]=sucursales[j+1];
+      sucursales[j].actualizarId(j+1);
+      //for (int k=0;k<sucursales[j].getSize();k++){
+        //sucursales[j]=
+
+      //}
+    }
+    sucursales[sizeof(sucursales)-1]=Sucursal();
+}}
+
+//MÉTODO Eliminar Sucursal ~ No "delete", arreglo con varias posiciones. . .
+//. . .Al mover de espacio (ejemplo con "2"), el espacio vacio se pondrá un cero como valor establecido.

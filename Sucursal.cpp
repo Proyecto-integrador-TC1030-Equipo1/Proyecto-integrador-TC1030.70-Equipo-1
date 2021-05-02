@@ -78,3 +78,13 @@ void Sucursal::eliminarEmpleado(int indice){
 Empleado Sucursal::getEmpleado(int indice){
   return empleados[indice];
 }
+
+int Sucursal::getSize(){
+    return size;
+}
+
+int Sucursal::actualizarSucursalId(int n){
+    for (int i=0;i<size;i++){
+        empleados[i].setSucursalId(n)}
+
+}
