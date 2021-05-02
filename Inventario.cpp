@@ -120,3 +120,11 @@ void Inventario::eliminarSucursal(int indice){
 
 //MÉTODO Eliminar Sucursal ~ No "delete", arreglo con varias posiciones. . .
 //. . .Al mover de espacio (ejemplo con "2"), el espacio vacio se pondrá un cero como valor establecido.
+
+void Inventario::agregarAinvSucursal(int iSuc,int indice, int cantidad){
+  sucursales[iSuc].agregarProducto(indice, cantidad);
+}
+
+void Inventario::agregarCliente(Cliente c1){
+  cliente = c1;
+}
