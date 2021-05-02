@@ -24,7 +24,7 @@ void Empleado::setCargo(string _cargo){
   cargo = _cargo;
 }
 
-string Empleado::getSucursalId(){
+int Empleado::getSucursalId(){
   return sucursalId;
 }
 

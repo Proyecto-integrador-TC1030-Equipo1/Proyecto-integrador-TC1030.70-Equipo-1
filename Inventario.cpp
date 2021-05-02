@@ -49,6 +49,18 @@ void Inventario::agregarProducto(Producto nuevo){
     cliente.agregarProducto(0,sizeProducto);
 }
 
+void Inventario::eliminarProducto(int indice){
+  if (indice<memProducto){
+    for (int j=indice; j<memProducto; j++){
+      productos[j]=productos[j+1];
+    }
+    productos[sizeof(productos)-1]=Producto();
+    for (int i = 0; i < sizeSucursal; i++) {
+      sucursales[i].eliminarProducto(indice);
+    }
+    cliente.eliminarProducto(indice);
+}}
+
 void Inventario::atiende(Empleado at){
   atendio = at;
   sAtendiendo = at.getSucursalId();
@@ -59,4 +71,10 @@ void Inventario::transferirEmpleado(int sOrigen, int sDestino, int indiceEmplead
   sucursales[sOrigen].eliminarEmpleado(indiceEmpleado);
   transfiriendo.setSucursalId(sDestino);
   sucursales[sDestino].aniadirEmpleado(transfiriendo);
+}
+
+void Inventario::generarOrden(){
+  if (atendio.getCargo() == "gerente" || atendio.getCargo() == "vendedor") {
+    /* code */
+  }
 }

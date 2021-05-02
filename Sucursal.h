@@ -1,8 +1,14 @@
 #ifndef Sucursal_h
 #define Sucursal_h
 #include <iostream>
+#ifndef Cliente_h
+#define Cliente_h
 #include "Cliente.h"
+#endif
+#ifndef Empleado_h 
+#define Empleado_h
 #include "Empleado.h"
+#endif
 using namespace std;
 
 class Sucursal{

@@ -11,6 +11,7 @@ Cliente::Cliente():Persona(){
   inv = new int [1];
   inv[0] = 0;
   sizeMem = 1;
+  formaPago="Efectivo";
 }
 
 Cliente::Cliente(string _nombre, Direccion _direccion, string _fecha, string _sexo, int _numero, string _rfc):Persona(_nombre, _direccion, _fecha, _sexo, _numero){
@@ -18,6 +19,15 @@ Cliente::Cliente(string _nombre, Direccion _direccion, string _fecha, string _se
   inv = new int [1];
   inv[0] = 0;
   sizeMem = 1;
+  formaPago="Efectivo";
+}
+
+string Cliente::getFormaPago(){
+  return formaPago;
+}
+
+void Cliente::setFormaPago(string fp){
+  formaPago = fp;
 }
 
 string Cliente::getRfc(){

@@ -26,10 +26,12 @@ class Inventario{
       int sizeProducto, sizeSucursal, memProducto, memSucursal, sAtendiendo;
     public:
       Inventario();
-      void generarOrden(Cliente);
+      void generarOrden();
       void operator + (Cliente);
+      void operator + (Empleado);
       void transferirEmpleado(int, int, int);
       void agregarSucursal(Sucursal);
+      void eliminarSucursal(int);
       void agregarProducto(Producto);
       void eliminarProducto(int);
       void atiende(Empleado);

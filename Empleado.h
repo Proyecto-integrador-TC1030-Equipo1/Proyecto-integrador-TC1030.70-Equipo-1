@@ -7,7 +7,7 @@
 class Empleado : public Persona{
   public:
     Empleado();
-    Empleado(string, Direccion, string, string, int, string);
+    Empleado(string, Direccion, string, string, int, string, int);
     string getCargo();
     void setCargo(string);
     void imprimir();
